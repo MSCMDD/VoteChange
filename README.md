@@ -1,6 +1,6 @@
-## 关于汉化组
+## 关于汉化组  About Translation Group
 
-汉化者为：
+翻译组Translation team：
 AoMe奥美互助公社——Ленинград
 AoMe Mutual Aid Commune
 
