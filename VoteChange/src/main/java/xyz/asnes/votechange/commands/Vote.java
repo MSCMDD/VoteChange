@@ -22,11 +22,11 @@ public class Vote implements CommandExecutor {
   @Override
   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
     if (CallVote.voters.contains(sender.getName())) {
-      sender.sendMessage(ChatColor.RED + "You can only vote once.");
+      sender.sendMessage(ChatColor.RED + "您只能投票一次。");
       return true;
     }
     if (!CallVote.isVote) {
-      sender.sendMessage(ChatColor.RED + "There is no vote happening currently.");
+      sender.sendMessage(ChatColor.RED + "目前没有进行投票。");
       return true;
     }
     if (sender instanceof Player) {
@@ -35,19 +35,19 @@ public class Vote implements CommandExecutor {
         case "yes":
           CallVote.voters.add(sender.getName());
           CallVote.vote(true);
-          sender.sendMessage(ChatColor.AQUA + "You voted " + ChatColor.GREEN + "YES");
+          sender.sendMessage(ChatColor.AQUA + "您投了 " + ChatColor.GREEN + "赞成票（YES）");
           return true;
         case "no":
           CallVote.voters.add(sender.getName());
           CallVote.vote(false);
-          sender.sendMessage(ChatColor.AQUA + "You voted " + ChatColor.RED + "NO");
+          sender.sendMessage(ChatColor.AQUA + "您投了 " + ChatColor.RED + "否决票（NO）");
           return true;
         default:
-          sender.sendMessage(ChatColor.RED + "You can only vote yes or no.");
+          sender.sendMessage(ChatColor.RED + "您只能投赞成票（yes）或反对票（no）。");
           return true;
       }
     } else {
-      sender.sendMessage("You must be a player to vote.");
+      sender.sendMessage("您必须是玩家才能投票。");
     }
     return false;
   }

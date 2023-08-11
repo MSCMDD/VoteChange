@@ -1,14 +1,14 @@
 vote-duration-seconds: 20
 required-majority: 0.6666
 minimum-players: 3
-empty-vote-message: 'You cannot call a vote on nothing.'
-one-queued-message: 'You cannot queue two votes. Please try again after your vote is complete.'
-only-one-vote-message: 'There is already a vote in progress. Your vote has been added to the queue.'
-command-blacklisted-message: 'The requested command is not allowed.'
-cap-not-reached-message: 'There are not enough players online to vote on that command.'
-players-only-message: 'You must be a player to call a vote.'
-queue-empty-message: 'The voting queue is empty.'
-queue-cleared-message: 'The voting queue has been cleared.'
+empty-vote-message: '你不能对任何事情进行投票。'
+one-queued-message: '您不能同时投两张选票。请在投票完成后重试。'
+only-one-vote-message: '投票已经在进行中。您的投票已添加到队列中。'
+command-blacklisted-message: '不允许请求的命令。'
+cap-not-reached-message: '没有足够的在线玩家对该命令进行投票。'
+players-only-message: '您必须是玩家才能进行投票。'
+queue-empty-message: '投票队列为空。'
+queue-cleared-message: '投票队列已被清除。'
 blacklisted-commands:
   - "op"
 whitelisted-commands:

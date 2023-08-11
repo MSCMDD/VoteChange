@@ -22,7 +22,7 @@ public final class VoteChange extends JavaPlugin implements Listener {
     // Plugin startup logic
     getConfig().options().copyDefaults();
     saveDefaultConfig();
-    System.out.println("VoteChange enabled");
+    System.out.println("VoteChange 启用");
     dataQueue = new LinkedList<>();
     voteProposers = new ArrayList<>();
     getCommand("callvote").setExecutor(new CallVote(this));
@@ -35,7 +35,7 @@ public final class VoteChange extends JavaPlugin implements Listener {
   @Override
   public void onDisable() {
     // Plugin shutdown logic
-    System.out.println("VoteChange disabled");
+    System.out.println("VoteChange 禁用");
 
   }
 

@@ -22,7 +22,7 @@ public class ViewVotingQueue implements CommandExecutor {
       sender.sendMessage(ChatColor.AQUA + plugin.getConfig().getString("queue-empty-message"));
     } else {
       for (CommandData curData : plugin.dataQueue) {
-        sender.sendMessage(ChatColor.GOLD + curData.sender.getName() + ChatColor.WHITE + " will vote to run command " +
+        sender.sendMessage(ChatColor.GOLD + curData.sender.getName() + ChatColor.WHITE + " 将投票决定执行命令 " +
             constructSubCommand(curData.args));
       }
     }

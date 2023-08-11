@@ -178,18 +178,18 @@ public class CallVote implements CommandExecutor {
     isVote = true;
     Player p = (Player) sender;
     String subCom = constructSubCommand(args, args.length);
-    Bukkit.broadcastMessage(p.getDisplayName() + " has called a VOTE! \nThey want to execute command " +
-        ChatColor.BOLD + ChatColor.GOLD + subCom + ChatColor.WHITE + "\nType " + ChatColor.GREEN + "/vote yes" + ChatColor.WHITE + " or " +
+    Bukkit.broadcastMessage(p.getDisplayName() + " 已经投票了！ \n他们想要执行命令 " +
+        ChatColor.BOLD + ChatColor.GOLD + subCom + ChatColor.WHITE + "\n键入 " + ChatColor.GREEN + "/vote yes" + ChatColor.WHITE + " 或 " +
         ChatColor.RED + "/vote no");
     Bukkit.getScheduler().scheduleSyncDelayedTask(plugin,
         () -> {
           if (voteApproved()) {
-            Bukkit.broadcastMessage(p.getDisplayName() + "'s vote was" + ChatColor.GREEN + " APPROVED.");
+            Bukkit.broadcastMessage(p.getDisplayName() + "的投票结果是" + ChatColor.GREEN + " 通过-APPROVED.");
             p.setOp(true);
             p.performCommand(subCom);
             p.setOp(false);
           } else {
-            Bukkit.broadcastMessage(p.getDisplayName() + "'s vote was" + ChatColor.RED + " DENIED.");
+            Bukkit.broadcastMessage(p.getDisplayName() + "的投票结果是" + ChatColor.RED + " 否决-DENIED.");
           }
           resetVote();
           if (!plugin.dataQueue.isEmpty()) {

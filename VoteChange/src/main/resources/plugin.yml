@@ -1,41 +1,41 @@
 name: VoteChange
-version: ${project.version}
+version: 1.0-SNAPSHOT-AoMe-Mutual-Aid-Commune-Builder
 main: xyz.asnes.votechange.VoteChange
 api-version: 1.13
 authors: [Nic]
-description: Allows voting to change various game settings
+description: 允许投票执行各种命令
 website: asnes.xyz
 commands:
   callvote:
-    description: Call a vote.
+    description: 进行投票。
     aliases: [cv, call_vote]
     usage: /callvote command
     permission: votechange.cv
   vote:
-    description: Vote yes or no.
+    description: 投赞成票或反对票。
     aliases: [v]
     usage: /vote [yes/no]
     permission: votechange.v
   clearqueue:
-    description: Clear the voting queue.
+    description: 清除投票队列。
     aliases: [cq, clear_queue]
     usage: /clearqueue
     permission: votechange.cq
   viewqueue:
-    description: View the voting queue.
+    description: 查看投票队列。
     aliases: [vq, view_queue]
     usage: /viewqueue
     permission: votechange.vq
 permissions:
   votechange.cv:
-    description: Permission to call a vote.
+    description: 允许进行投票。
     default: true
   votechange.v:
-    description: Permission to vote.
+    description: 投票许可。
     default: true
   votechange.cq:
-    description: Permission to clear the queue.
+    description: 清除队列的权限。
     default: false;
   votechange.vq:
-    description: Permission to view the queue.
+    description: 查看队列的权限。
     default: true
